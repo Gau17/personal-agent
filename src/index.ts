@@ -9,28 +9,27 @@ import { z } from 'zod';
 
 // Project NANDA company information
 const COMPANY_INFO = {
-  name: "Google",
-  description: `Google is a company that offers a variety of services, including search, email, and maps.`,
+  name: "Gautam Bidari",
+  description: `Experienced embedded engineer turning raw sensor and enterprise data into production AI—leveraging embedded firmware, cloud micro-services, and multi-agent architectures to deliver resilient, scalable intelligence`,
   focus_areas: [
-    "Search",
-    "Email",
-    "Maps",
-    "Gmail",
-    "Google Drive",
-    "Google Cloud",
-    "Model Context Protocol (MCP) Extensions"
+    "Embedded Firmware",
+    "Cloud Micro-Services",
+    "Multi-Agent Architectures",
+    "Resilient, Scalable Intelligence",
+    "AI-Powered Decision Making",
+    "IoT and Edge Computing"
   ],
-  stage: "Series B",
-  approach: "NA",
-  website: "https://www.google.com",
-  contact: "info@google.com",
-  network: "Global technology network"
+  // stage: "Series B",
+  // approach: "NA",
+  website: "https://gau17.github.io/react-portfolio",
+  contact: "bidari.gautam@gmail.com",
+  // network: "Global technology network"
 };
 
 // Create the MCP server instance
 function createMcpServer(): McpServer {
   const server = new McpServer({
-    name: "google-server",
+    name: "gautam-server",
     version: "1.0.0"
   });
 
@@ -48,23 +47,23 @@ function createMcpServer(): McpServer {
           responseText = `${COMPANY_INFO.name}\n\n${COMPANY_INFO.description}`;
           break;
         case "focus":
-          responseText = `${COMPANY_INFO.name} Focus Areas:\n\n${COMPANY_INFO.focus_areas.map(area => `• ${area}`).join('\n')}\n\nInvestment Stage: ${COMPANY_INFO.stage}\nApproach: ${COMPANY_INFO.approach}`;
+          responseText = `${COMPANY_INFO.name} Focus Areas:\n\n${COMPANY_INFO.focus_areas.map(area => `• ${area}`).join('\n')}\n`;
           break;
         case "contact":
           responseText = `${COMPANY_INFO.name} Contact Information:\n\nWebsite: ${COMPANY_INFO.website}\nEmail: ${COMPANY_INFO.contact}`;
           break;
         case "investment":
-          responseText = `${COMPANY_INFO.name} Investment Details:\n\nStage: ${COMPANY_INFO.stage}\nFocus Areas: ${COMPANY_INFO.focus_areas.join(', ')}\nApproach: ${COMPANY_INFO.approach}\nNetwork: ${COMPANY_INFO.network}`;
+          responseText = `${COMPANY_INFO.name} \nFocus Areas: ${COMPANY_INFO.focus_areas.join(', ')}`;
           break;
         case "all":
         default:
           responseText = `${COMPANY_INFO.name} - Complete Information\n\n` +
             `OVERVIEW:\n${COMPANY_INFO.description}\n\n` +
             `FOCUS AREAS:\n${COMPANY_INFO.focus_areas.map(area => `• ${area}`).join('\n')}\n\n` +
-            `INVESTMENT DETAILS:\n` +
-            `• Stage: ${COMPANY_INFO.stage}\n` +
-            `• Approach: ${COMPANY_INFO.approach}\n` +
-            `• Network: ${COMPANY_INFO.network}\n\n` +
+            // `INVESTMENT DETAILS:\n` +
+            // `• Stage: ${COMPANY_INFO.stage}\n` +
+            // `• Approach: ${COMPANY_INFO.approach}\n` +
+            // `• Network: ${COMPANY_INFO.network}\n\n` +
             `CONTACT:\n` +
             `• Website: ${COMPANY_INFO.website}\n` +
             `• Email: ${COMPANY_INFO.contact}`;
@@ -207,7 +206,7 @@ async function startServer(): Promise<void> {
   app.get('/health', (_req: express.Request, res: express.Response) => {
     res.json({ 
       status: 'healthy', 
-      service: 'google-mcp-server',
+      service: 'gautam-mcp-server',
       version: '1.0.0',
       timestamp: new Date().toISOString()
     });
@@ -216,9 +215,9 @@ async function startServer(): Promise<void> {
   // Root endpoint with basic info
   app.get('/', (_req: express.Request, res: express.Response) => {
     res.json({
-      name: 'Google MCP Server',
+      name: 'Gautam MCP Server',
       version: '1.0.0',
-      description: 'Model Context Protocol server for Google information',
+      description: 'Model Context Protocol server for Gautam Bidari\'s information',
       endpoints: {
         mcp: '/mcp',
         health: '/health'

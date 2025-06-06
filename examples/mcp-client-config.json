@@ -1,17 +1,17 @@
 {
   "mcpServers": {
-    "your-company": {
-      "comment": "Example configuration for MCP clients - update with your company details",
+    "gautam-mcp-server": {
+      "comment": "Gautam MCP Server configuration",
       "command": "node",
       "args": ["dist/index.js"],
       "env": {
         "PORT": "3000"
       }
     },
-    "your-company-remote": {
-      "comment": "Example for connecting to deployed server",
+    "gautam-mcp-server-remote": {
+      "comment": "Gautam MCP Server remote configuration",
       "command": "npx",
-      "args": ["mcp-remote", "https://your-deployed-url.railway.app/mcp"]
+      "args": ["mcp-remote", "https://gautam-mcp-server.railway.app/mcp"]
     }
   }
 } 

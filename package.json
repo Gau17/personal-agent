@@ -1,7 +1,7 @@
 {
-  "name": "google-mcp-server",
+  "name": "gautam-mcp-server",
   "version": "1.0.0",
-  "description": "Model Context Protocol server for Google information",
+  "description": "Model Context Protocol server for Gautam Bidari's information",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -15,11 +15,11 @@
   },
   "keywords": [
     "mcp",
-    "google",
+    "gautam",
     "decentralized-ai",
     "typescript"
   ],
-  "author": "Maria",
+  "author": "Gautam Bidari",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
