@@ -11,7 +11,7 @@
     "gautam-mcp-server-remote": {
       "comment": "Gautam MCP Server remote configuration",
       "command": "npx",
-      "args": ["mcp-remote", "https://gautam-mcp-server.railway.app/mcp"]
+      "args": ["mcp-remote", "https://personal-agent-alpha.vercel.app"]
     }
   }
 } 
